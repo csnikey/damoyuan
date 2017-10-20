@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: compLoad('HelloWorld')
+      name: 'test',
+      component: compLoad('test')
     },
     {
       path: '/index',
