@@ -6,6 +6,7 @@
     <x-input title="验证码" class="weui-vcode" >
         <x-button slot="right" :type="btntype" mini @click.native="sendcode">{{text}}</x-button>
       </x-input>
+      
   </group>
     </ul>
   </div>
