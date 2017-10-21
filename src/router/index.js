@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const compLoad = (name) => (resolve) => require([`@/components/${name}`], resolve)
+const comploader = (name) => (resolve) => require([`@/components/${name}`], resolve)
 
 Vue.use(Router)
 
@@ -9,17 +9,32 @@ export default new Router({
     {
       path: '/',
       name: 'test',
-      component: compLoad('test')
+      component: comploader('test')
     },
     {
-      path: '/index',
-      name: 'index',
-      component: compLoad('index')
+      path: '/tologin',
+      name: 'tologin',
+      component: comploader('tologin')
     },
     {
-      path: '/qq',
-      name: 'qq',
-      component: compLoad('qq')
-    }
+      path: '/confirmaddr',
+      name: 'confirmaddr',
+      component: comploader('confirmaddr')
+    },
+    {
+      path: '/confirmorder',
+      name: 'confirmorder',
+      component: comploader('confirmorder')
+    },
+    {
+      path: '/paysucc',
+      name: 'paysucc',
+      component: comploader('paysucc')
+    },
+    {
+      path: '/lessondetail',
+      name: 'lessondetail',
+      component: comploader('lessondetail')
+    },
   ]
 })
