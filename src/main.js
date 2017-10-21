@@ -5,11 +5,14 @@ import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 import App from './App'
 import router from './router'
-import {ToastPlugin} from 'vux'
+import '@/style/main.css'
+import {ToastPlugin, AlertPlugin} from 'vux'
+require('./lib/viewport.js')
 
 Vue.use(VueRouter)
 // 默认配置一些常用的插件
 Vue.use(ToastPlugin)
+Vue.use(AlertPlugin)
 
 FastClick.attach(document.body)
 
