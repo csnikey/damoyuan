@@ -10,29 +10,61 @@ input,button{
 html,body{
     width:100%;
     min-height:100%;
-    background:#f5f5f5;
+    background:rgb(245, 245, 245);
+    position:relative;
+    overflow: hidden;
   }
+body{
+    height:100%;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    overflow: hidden;
+}  
+#app{
+    height:100%;
+  position:absolute;
+  top:0;
+  width:100%;
+  left:0;
+  bottom:0;
+  overflow: scroll;
+}
+
   li{
       list-style: none;
   }
   body{
-    background:#fff;
     min-height:100%;
   }
   .g-container{
       width:648px;
       margin:0 auto;
   }
+  .g-main{
+    overflow: scroll;
+   height:100%;
+ }
+ .g-maincontainer{
+     padding-top:88px;
+    padding-bottom:98px;
+  }
   /* 头部组件样式 */
   .m-title{
+      position: absolute;
+      width:100%;
+      top:0;
+      left:0;
+      right:30px;
       height: 88px;
       background-color: #0dd9a6;
     line-height:88px;
     color:#fff;
     font-size:34px;
     text-align:center;
-    padding-left:30px;
-    position: relative;
+    z-index:99;
   }
   .m-title .back{ 
     position: absolute;
@@ -58,10 +90,10 @@ html,body{
   
   /* 向上的间距 常用 */
   .c-margintop-s{
-      margin-top:20px;
+      margin-top:20px!important;
   }
   .c-margintop-m{
-    margin-top:80px;
+    margin-top:80px!important;
 }
 
 .c-color-gray{
@@ -71,6 +103,7 @@ html,body{
 .m-panel{
     background:#fff;
     padding-left:30px;
+    margin-bottom:20px;
 }
 /* 面板标题行 */
 .li-titleline{
@@ -80,32 +113,3 @@ html,body{
     font-size:26px;
     border-bottom: solid 2px #ededed;
 }
-/* 地址面板 */
-.li-address{
-    padding:30px 0;
-    position:relative;
-
-}
-.li-address:after{
-    display: inline-block;
-    content:'';
-    top:55px;
-    position:absolute;
-        width: 14px;
-        height:14px;
-        right:30px;
-        transform: rotate(45deg);
-        border-top: solid 4px #c6cdd6;
-        border-right: solid 4px #c6cdd6;
-    
-}
-.li-address  .title{
-    font-size: 30px;
-    color: #333;
-    line-height:42px;
- }
- .li-address  .desc{
-    font-size: 26px;
-    color: #999;
-    line-height:37px;
- }

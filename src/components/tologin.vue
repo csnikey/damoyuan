@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="g-main">
     <!-- <ul>
        <group>
     <x-input title="手机号码" is-type=china-mobile  placeholder=请输入11位手机号码></x-input>
@@ -18,6 +18,7 @@
        <a @click="back" class="back"><img src="../assets/icon-back.png"></a>
        验证码登录
      </div> 
+     <div class="g-maincontainer">
      <div class="g-container">
        <form class="m-form c-margintop-s">
        <li class="formli"><input placeholder="请输入手机号" class="u-input-text" v-model="phoneno"> </li>
@@ -27,9 +28,14 @@
        <button class="u-button-block c-margintop-m" @click="next">下一步</button>
        </form>
      </div>
+     </div>
   </div>
 </template>
+
 <style lang="less" scoped>
+.g-main{
+  background:#fff;
+}
  /* 表单的样式 */
   .m-form{
     .formli{
@@ -48,7 +54,6 @@
     float:left;
     font-size:30px;
     line-height:78px;
-
   }
   .sendcode{
     width:240px;
@@ -143,8 +148,4 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
 
-
-</style>
