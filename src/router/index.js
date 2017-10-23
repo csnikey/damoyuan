@@ -36,5 +36,10 @@ export default new Router({
       name: 'lessondetail',
       component: comploader('lessondetail')
     },
+    {
+      path: '/error',
+      name: 'error',
+      component: comploader('error')
+    }
   ]
 })
