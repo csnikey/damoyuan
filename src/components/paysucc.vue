@@ -6,7 +6,7 @@
      </div> 
      <div class="g-maincontainer">
        <div class="m-panel-paysucc">
-        <img src="" class="paysuccimg"/>
+        <img src="../assets/paysucc.png" class="paysuccimg"/>
         <ul class="lessonbasic">
           <li class="msgtitle">报名成功</li>
           <li class="msgli">开课时间:{{opentime}}</li>
@@ -20,7 +20,7 @@
        </div>
 
 
-       <div class="m-panel-focus">
+       <div class="m-panel-focus c-margintop-s">
           <img src="" class="qrcode"/>
           <div class="focus">
             <label class="square1"></label>
@@ -63,8 +63,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
+.g-main{
+  background:#ededed;
+}
 .m-panel-paysucc{
   background:#fff;
+  padding-top:50px;
    text-align: center;
    padding-bottom:60px;
    .u-button-s{
@@ -79,10 +83,10 @@ export default {
 
    }
   .paysuccimg{
-    width:300px;
-    height:300px;
+    margin:0 auto 50px;
+    width:202px;
+    height:204px;
     display:block;
-    margin:0 auto;
   }
   .lessonbasic{
     .msgtitle{

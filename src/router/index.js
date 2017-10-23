@@ -32,6 +32,11 @@ export default new Router({
       component: comploader('paysucc')
     },
     {
+      path: '/topay',
+      name: 'topay',
+      component: comploader('topay')
+    },
+    {
       path: '/lessondetail',
       name: 'lessondetail',
       component: comploader('lessondetail')

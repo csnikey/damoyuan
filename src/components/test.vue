@@ -10,6 +10,7 @@
   <router-link to="tologin" >注册登录</router-link><br>
   <router-link to="confirmOrder" >确认订单</router-link><br>
   <router-link to="confirmaddr" >收货地址</router-link><br>
+  <router-link to="topay" >支付确认页</router-link><br>
   <router-link to="paysucc" >支付成功页</router-link><br>
    <router-link to="error" >错误页</router-link>
 </ul>

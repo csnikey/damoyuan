@@ -6,13 +6,11 @@ import VueRouter from 'vue-router'
 import App from './App'
 import router from './router'
 import '@/style/main.css'
-import {ToastPlugin, AlertPlugin} from 'vux'
+import Mint from 'mint-ui'
+Vue.use(Mint)
 require('./lib/viewport.js')
 
 Vue.use(VueRouter)
-// 默认配置一些常用的插件
-Vue.use(ToastPlugin)
-Vue.use(AlertPlugin)
 
 FastClick.attach(document.body)
 

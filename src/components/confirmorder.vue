@@ -90,6 +90,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
+ .g-maincontainer{
+    padding-bottom:98px;
+  }
 /* 地址面板 */
 .li-address {
   padding: 30px 0;

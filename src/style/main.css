@@ -46,10 +46,11 @@ body{
   .g-main{
     overflow: scroll;
    height:100%;
+   background:rgb(245, 245, 245);
  }
  .g-maincontainer{
      padding-top:88px;
-    padding-bottom:98px;
+    /* padding-bottom:98px; */
   }
   /* 头部组件样式 */
   .m-title{
