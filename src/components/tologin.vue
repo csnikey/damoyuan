@@ -133,7 +133,7 @@ export default {
       },
       sendcode:function(){
         if(this.cansend){
-          this.$api.post('kusercen.LoginFacade.sendLoginCode',{mobileNo:18767101995}).then(
+          this.$api.post('login/sendLoginCode',{mobileNo:'18767101995'}).then(
             (res)=>{
               console.log(res);
             }
