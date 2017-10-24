@@ -7,10 +7,14 @@ import App from './App'
 import router from './router'
 import '@/style/main.css'
 import Mint from 'mint-ui'
+import api from '@/util/api.js'
 Vue.use(Mint)
 require('./lib/fit750.js')
+// require('./lib/jquery.cookie')
 
 Vue.use(VueRouter)
+
+Vue.prototype.$api = api
 
 FastClick.attach(document.body)
 

@@ -99,7 +99,7 @@ export default {
   data () {
     return {
         text:'获取验证码',
-        time:120,
+        time:10,
         cansend:true,
         btntype:"primary",
         phoneno:'',
@@ -108,11 +108,11 @@ export default {
     }},
     methods: {
       next:function(){
-         this.tipmsg="手机号密码错误"
-         this.$vux.alert.show({
-           title:'手机号注册成功，密码是123678',
+        //  this.tipmsg="手机号密码错误"
+        //  this.$vux.alert.show({
+        //    title:'手机号注册成功，密码是123678',
 
-         })
+        //  })
       },
       back:function(){
           console.log(111);
@@ -123,7 +123,7 @@ export default {
              timetemp=this.time--
              this.text= `重新发送${timetemp}`
            }else{
-              this.time=120
+              this.time=10
               clearInterval(this.t);
               this.text= `获取验证码`
               this.cansend=true
@@ -133,12 +133,18 @@ export default {
       },
       sendcode:function(){
         if(this.cansend){
+          this.$api.post('kusercen.LoginFacade.sendLoginCode',{mobileNo:18767101995}).then(
+            (res)=>{
+              console.log(res);
+            }
+
+          )
           // 发送验证码
-          this.cansend=false;
-          this.btntype="default"
-          this.text="重新发送120"
-          this.time--
-          this.t=setInterval(this.timer,1000);
+          // this.cansend=false;
+          // this.btntype="default"
+          // this.text="重新发送10"
+          // this.time--
+          // this.t=setInterval(this.timer,1000);
         }
            
       },
