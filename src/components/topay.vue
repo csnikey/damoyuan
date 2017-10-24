@@ -15,7 +15,7 @@
       <div class="m-panel c-margintop-s">
         <li class="li-titleline">订单号：{{orderNo}}</li>
         <li class="li-lesson">
-           <img :src="imgurl" class="headimg">
+           <img :src="imgurl"  src="../assets/wx.png" class="headimg">
            <div class="info">
               <div class="lesson-title">{{title}}</div>
               
@@ -48,7 +48,7 @@ export default {
   },
   data() {
     return {
-      imgurl: "",
+      imgurl: "/src/assets/wx.png",
       sumprice:"399",
       time:'',
       inittime:1800,
@@ -91,73 +91,72 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .g-maincontainer{
-    padding-bottom:98px;
+    padding-bottom:.98rem;
   }
 .m-botopt {
   position: absolute;
-  bottom: 0px;
+  bottom: 0rem;
   left: 0;
   right: 0;
   background: #fff;
-  height: 98px;
-  line-height: 98px;
+  height: .98rem;
+  line-height: .98rem;
   .sumprice {
     float: left;
-    margin-left: 30px;
-    font-size: 40px;
+    margin-left: .30rem;
+    font-size: .40rem;
     color: #ff3c4b;
   }
   .toorder {
     float: right;
-    width: 374px;
-    height: 98px;
+    width: 3.74rem;
+    height: .98rem;
     background-color: #ff7681;
     color: #fff;
-    font-size: 36px;
-    letter-spacing: -0.9px;
+    font-size: .36rem;
     text-align: center;
   }
 }
 .m-timecounter{
   background:#fff;
-  padding:60px 0;
+  padding:.60rem 0;
   text-align:center;
   .title{
-    font-size: 30px;
+    font-size: .30rem;
   color: #333;
-  line-height:42px;
+  line-height:.42rem;
   }
   .time{
-    	font-size: 72px;
+    	font-size: .72rem;
 	line-height: 1.0;
 	color: #ff4949;
   }
 }
 
 .li-lesson {
-  padding: 20px 0;
+  padding: .20rem 0;
   overflow: hidden;
-  border-bottom: solid 2px #ededed;
+  border-bottom: solid .02rem #ededed;
   .headimg {
     float: left;
-    width: 100px;
-    height: 100px;
+    width: 1.00rem;
+    height: 1.00rem;
     border-radius: 50%;
   }
   .info {
-    margin-left: 20px;
+    margin-left: .20rem;
     float: right;
-    width: 506px;
+    width: 5.06rem;
   }
   .lesson-title,
   .lesson-basic {
-    width: 540px;
+    width: 5.40rem;
     float: right;
-    margin-right: 58px;
+    margin-right: .58rem;
   }
   .lesson-title {
-    line-height: 42px;
-    font-size: 30px;
+    line-height: .42rem;
+    font-size: .30rem;
     color: #333333;
   }
  
@@ -165,20 +164,20 @@ export default {
 
 // 支付方式
 .payway{
-  height:78px;
-    line-height:78px;
+  height:.78rem;
+    line-height:.78rem;
     color:#999;
-    font-size:26px;
-    border-bottom: solid 2px #ededed; 
+    font-size:.26rem;
+    border-bottom: solid .02rem #ededed; 
   .icon{
-   width:46px;
-   height:46px;
+   width:.46rem;
+   height:.46rem;
    vertical-align: middle;
   }
   .type{
-    font-size: 26px;
+    font-size: .26rem;
   color: #999;
-  margin-left:20px;
+  margin-left:.20rem;
   }
 }
 </style>

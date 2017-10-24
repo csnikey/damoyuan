@@ -9,7 +9,7 @@
           <form class="m-form c-margintop-s">
        <li class="formli"><label class="datatype">收件人</label><input placeholder="请输入收件人姓名" class="u-input-text" v-model="personname"> </li>
        <li class="formli"><label class="datatype">手机号</label><input placeholder="请输入手机号" class="u-input-text" v-model="personmobile"> </li>
-       <li class="formli formli-area-picker"><label class="datatype">所在地区</label><input placeholder="请选择" class="u-input-area" v-model="personarea"> </li>
+       <li class="formli formli-area-picker"><label class="datatype">所在地区</label><span placeholder="请选择" class="u-input-area"  disabled>请选择</span> </li>
        <li class="formli-area"><label class="datatype">详细地址</label><textarea placeholder="请输入详细地址信息" class="u-input-textarea" v-model="personaddr"></textarea></li>
    
        <button class="u-button-block c-margintop-m c-main-size" @click="submit">保存地址</button>
@@ -46,37 +46,41 @@ export default {
   background:#fff;
 }
 .c-main-size{
-  width:648px!important;
+  width:6.48rem!important;
   margin:0 auto;
-  margin-left: 51px;
+  margin-left: .51rem;
 }
   .m-form{
     .formli,.formli-area{
- line-height:78px;
- height:78px;
+ line-height:.78rem;
+ height:.78rem;
  text-align: left;
- border-bottom:  2px #f5f5f5 solid;
- padding:0 30px;
+ border-bottom:  .02rem #f5f5f5 solid;
+ padding:0 .30rem;
   }
   .datatype{
-    width:120px;
+    width:1.20rem;
     float: left;
-    margin-right:60px;
-    font-size:30px;
+    margin-right:.60rem;
+    font-size:.30rem;
     color:#666;
   }
     .u-input-text,.u-input-area,.u-input-textarea{
-      width:499px;
-      font-size:30px;
+      width:4.99rem;
+      font-size:.30rem;
       color:#333;
-      line-height:78px;
+      line-height:.78rem;
       float: left;
   }
+  .u-input-textarea{
+    padding-top:.2rem;
+      line-height:.40rem;
+  }
   .u-input-area{
-      width:483px;
-      font-size:30px;
-      color:#333;
-      line-height:78px;
+      width:4.83rem;
+      font-size:.30rem;
+      color:#999;
+      line-height:.78rem;
   }
   .formli-area{
   overflow: hidden;
@@ -84,31 +88,31 @@ export default {
   resize: none;
   outline: none;
   -webkit-appearance: none;
-  height:156px;
+  height:1.56rem;
   }
   .formli-area-picker{
     position: relative;
     &:after{
     display: inline-block;
     content: "";
-    top: 26px;
+    top: .26rem;
     position: absolute;
-    width: 14px;
-    height: 14px;
-    right: 30px;
+    width: .14rem;
+    height: .14rem;
+    right: .30rem;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    border-top: solid 4px #c6cdd6;
-    border-right: solid 4px #c6cdd6;
+    border-top: solid .04rem #c6cdd6;
+    border-right: solid .04rem #c6cdd6;
   }
   }
 .u-button-block{
     background:#0dd9a6;
     width:100%;
-    border-radius:8px;
-    height:88px;
-    line-height:88px;
-    font-size:36px;
+    border-radius:.08rem;
+    height:.88rem;
+    line-height:.88rem;
+    font-size:.36rem;
     text-align: center;
     color:#fff;
 

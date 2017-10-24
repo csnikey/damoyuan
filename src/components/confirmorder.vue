@@ -20,7 +20,7 @@
         <li class="li-titleline">讲义寄送地址</li>
         <li class="li-address">
            <div class="title">收件人：{{personname}}<span class="mobile">{{personmobile}}</span></div>
-           <div class="address">收货地址: {{personaddress}}</div>
+           <div class="address"><div class="address-label">收货地址: </div><div class="address-cont">{{personaddress}}</div></div>
             
         </li>
 
@@ -45,8 +45,8 @@
            <div class="info">
               <div class="lesson-title">{{title}}</div>
               <div class="lesson-basic">
-                主讲老师：{{teacher}}<span class="lesson-subject">科目：</span>{{subject}}<br>
-                上课时间：{{time}}
+                主讲老师:{{teacher}}<span class="lesson-subject">科目:</span>{{subject}}<br>
+                上课时间:{{time}}
               </div> 
               <div class="lesson-price">价格：<span class="lesson-pricenum">￥{{price}}</span></div>
            </div>  
@@ -79,7 +79,7 @@ export default {
       sumprice: 3334,
       personname:'张三',
       personmobile:"18767101995",
-      personaddress:"浙江省杭州市西湖区的呢额外非123号"
+      personaddress:"浙江省杭州市西湖区的呢sdcsdfwe f额外非123号"
     };
   },
   methods: {
@@ -91,34 +91,34 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
  .g-maincontainer{
-    padding-bottom:98px;
+    padding-bottom:.98rem;
   }
 /* 地址面板 */
 .li-address {
-  padding: 30px 0;
+  padding: .30rem 0;
   position: relative;
   &:after {
     display: inline-block;
     content: "";
-    top: 55px;
+    top: .55rem;
     position: absolute;
-    width: 14px;
-    height: 14px;
-    right: 30px;
+    width: .14rem;
+    height: .14rem;
+    right: .30rem;
     transform: rotate(45deg);
-    border-top: solid 4px #c6cdd6;
-    border-right: solid 4px #c6cdd6;
+    border-top: solid .04rem #c6cdd6;
+    border-right: solid .04rem #c6cdd6;
   }
   .address,.desc{
-font-size: 26px;
-  line-height: 37px;
+font-size: .26rem;
+  line-height: .37rem;
   }
    .title {
-  font-size: 30px;
+  font-size: .30rem;
   color: #333;
-  line-height: 42px;
+  line-height: .42rem;
   .mobile{
-    margin-left:30px;
+    margin-left:.30rem;
   }
 }
  .desc {
@@ -126,49 +126,58 @@ font-size: 26px;
 }
  .address{
    color:#333;
+   overflow: hidden;
+   .address-label{
+     float: left;
+     width:1.3rem; 
+   }
+   .address-cont{
+     float: left;
+     width:5.5rem; 
+   }
  }
 
 }
 
 
 .li-lesson {
-  padding: 20px 0;
+  padding: .20rem 0;
   overflow: hidden;
-  border-bottom: solid 2px #ededed;
+  border-bottom: solid .02rem #ededed;
   .headimg {
     float: left;
-    width: 100px;
-    height: 100px;
+    width: 1.00rem;
+    height: 1.00rem;
     border-radius: 50%;
   }
   .info {
-    margin-left: 20px;
+    margin-left: .20rem;
     float: right;
-    width: 506px;
+    width: 5.8rem;
   }
   .lesson-title,
   .lesson-basic {
-    width: 540px;
+    width: 5.4rem;
     float: right;
-    margin-right: 58px;
+    margin-right: .58rem;
   }
   .lesson-title {
-    line-height: 42px;
-    font-size: 30px;
+    line-height: .42rem;
+    font-size: .30rem;
     color: #333333;
   }
   .lesson-basic {
-    font-size: 26px;
+    font-size: .26rem;
     color: #999999;
     .lesson-subject {
-      margin-left: 100px;
+      margin-left: .20rem;
     }
   }
   .lesson-price {
     float: right;
-    margin-right: 30px;
+    margin-right: .30rem;
     text-align: right;
-    font-size: 26px;
+    font-size: .26rem;
     color: #999;
     .lesson-pricenum {
       color: #ff3c4b;
@@ -177,39 +186,39 @@ font-size: 26px;
 }
 .m-botopt {
   position: absolute;
-  bottom: 0px;
+  bottom: 0rem;
   left: 0;
   right: 0;
   background: #fff;
-  height: 98px;
-  line-height: 98px;
+  height: .98rem;
+  line-height: .98rem;
   .sumprice {
     float: left;
-    margin-left: 30px;
-    font-size: 40px;
+    margin-left: .30rem;
+    font-size: .40rem;
     color: #ff3c4b;
   }
   .toorder {
     float: right;
-    width: 374px;
-    height: 98px;
+    width: 3.74rem;
+    height: .98rem;
     background-color: #ff7681;
     color: #fff;
-    font-size: 36px;
-    letter-spacing: -0.9px;
+    font-size: .36rem;
+    letter-spacing: -0.09px;
     text-align: center;
   }
 }
 //价格总计部分
 .li-lesson-sum {
-  padding-right: 30px;
-  height: 96px;
-  line-height: 96px;
-  font-size: 30px;
+  padding-right: .30rem;
+  height: .96rem;
+  line-height: .96rem;
+  font-size: .30rem;
   text-align: right;
   color: #333;
   .sum-num {
-    margin-right: 22px;
+    margin-right: .22rem;
   }
   .sum-price {
     color: #ff3c4b;

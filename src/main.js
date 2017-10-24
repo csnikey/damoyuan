@@ -8,7 +8,7 @@ import router from './router'
 import '@/style/main.css'
 import Mint from 'mint-ui'
 Vue.use(Mint)
-require('./lib/viewport.js')
+require('./lib/fit750.js')
 
 Vue.use(VueRouter)
 

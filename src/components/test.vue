@@ -33,7 +33,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
 #app{
-font-size:40px;
+font-size:0.4rem;
 }
 a{
   color:blue;

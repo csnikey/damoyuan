@@ -36,31 +36,31 @@ export default {
 .m-panel-payfail{
    text-align:center;
   .failimg{
-    width:300px;
-    height:300px;
-    margin-top:200px;
+    width:3.00rem;
+    height:3.00rem;
+    margin-top:2.00rem;
   }
   .msgtitle{
-  line-height: 48px;
-	font-size: 34px;
+  line-height: .48rem;
+	font-size: .34rem;
 	color: #333;
   }
   .msgtip{
-    font-size: 30px;
+    font-size: .30rem;
 	line-height: 1.5;
 	color: #999;
   }
 
 
  .u-button-s{
-   	width: 240px;
-	height: 80px;
-	border-radius: 8px;
+   	width: 2.40rem;
+	height: .80rem;
+	border-radius: .08rem;
   background-color: #0dd9a6;
-  margin:30px auto 0;
+  margin:.30rem auto 0;
   color:#fff;
   text-align:center;
-  font-size:30px;
+  font-size:.30rem;
  }
 }
 

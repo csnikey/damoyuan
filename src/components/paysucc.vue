@@ -21,7 +21,7 @@
 
 
        <div class="m-panel-focus c-margintop-s">
-          <img src="" class="qrcode"/>
+          <img src="../assets/qrcode.png" class="qrcode"/>
           <div class="focus">
             <label class="square1"></label>
             <label class="square2"></label>
@@ -68,45 +68,45 @@ export default {
 }
 .m-panel-paysucc{
   background:#fff;
-  padding-top:50px;
+  padding-top:.50rem;
    text-align: center;
-   padding-bottom:60px;
+   padding-bottom:.60rem;
    .u-button-s{
-   	width: 240px;
-	height: 80px;
-	border-radius: 8px;
+   	width: 2.40rem;
+	height: .80rem;
+	border-radius: .08rem;
   background-color: #0dd9a6;
-  margin:30px auto 0;
+  margin:.30rem auto 0;
   color:#fff;
   text-align:center;
-  font-size:30px;
+  font-size:.30rem;
 
    }
   .paysuccimg{
-    margin:0 auto 50px;
-    width:202px;
-    height:204px;
+    margin:0 auto .50rem;
+    width:2.02rem;
+    height:2.04rem;
     display:block;
   }
   .lessonbasic{
     .msgtitle{
-    font-size: 34px;
+    font-size: .34rem;
    color: #333;
-   line-height: 48px;
+   line-height: .48rem;
     }
     .msgli{
-	font-size: 30px;
+	font-size: .30rem;
 	line-height: 1.5;
 	color: #999;
     }}
   .tipmsg{
-   width: 470px;
-	border-top: solid 2px #ededed;
-  margin:30px auto;
-  padding-top:30px;
+   width: 4.70rem;
+	border-top: solid .02rem #ededed;
+  margin:.30rem auto;
+  padding-top:.30rem;
   .tipmsginfo{
-      width: 431px;
-	font-size: 30px;
+      width: 4.31rem;
+	font-size: .30rem;
 	line-height: 1.5;
   color: #999;
     .classqq{
@@ -119,64 +119,65 @@ export default {
 }
 .m-panel-focus{
   background:#fff;
-  padding:46px 100px;
-  margin-top:20px;
+  padding:.46rem 0.80rem;
+  margin-top:.20rem;
   overflow: hidden;
   .qrcode{
-    width: 200px;
-    height:200px;
+    width: 2.00rem;
+    height:2.00rem;
     float:left;
   }
   .focus{
     float: left;
-    margin-left:24px;
+    margin-left:.24rem;
     position: relative;
-    width:266px;
-    height:140px;
-    padding:30px;
+    width:3.66rem;
+    height:1.40rem;
+    padding:.30rem 0;
     .focus-words{
       text-align: center;
       position: absolute;
-      top:35px;
-      bottom:30px;
-      left:10px;
+      top:.35rem;
+      bottom:.30rem;
+      left:.0rem;
+      right:0;
       .focus-title{
-          font-size: 26px;
+          font-size: .26rem;
           font-weight: 500;
         color: #0dd9a6;
       }
       .focus-line{
-        font-size: 30px;
+        font-size: .30rem;
 	   line-height: 1.5;
     	color: #999;
       }
     }
     .square1,.square2,.square3,.square4{
-        width:30px;
-      height:30px;
+        width:.30rem;
+      height:.30rem;
       position:absolute;
     }
     .square1{
-      border-top: solid 2px #ededed;
-      border-left: solid 2px #ededed;
+      border-top: solid .02rem #ededed;
+      border-left: solid .02rem #ededed;
       top:0;
       left:0;
     }
      .square2{
-      border-top: solid 2px #ededed;
-      border-right: solid 2px #ededed;
+      border-top: solid .02rem #ededed;
+      border-right: solid .02rem #ededed;
       top:0;
       right:0;
     }
      .square3{
-      border-bottom: solid 2px #ededed;
-      border-left: solid 2px #ededed;
+      border-bottom: solid .02rem #ededed;
+      border-left: solid .02rem #ededed;
       bottom:0;
       left:0;
     }
      .square4{
-      border-bottom: solid 2px #ededed;
-      border-right: solid 2px #ededed;
+      border-bottom: solid .02rem #ededed;
+      border-right: solid .02rem #ededed;
       bottom:0;
       right:0;
     }
