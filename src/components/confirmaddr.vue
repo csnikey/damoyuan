@@ -10,6 +10,16 @@
        <li class="formli"><label class="datatype">收件人</label><input placeholder="请输入收件人姓名" class="u-input-text" v-model="personname"> </li>
        <li class="formli"><label class="datatype">手机号</label><input placeholder="请输入手机号" class="u-input-text" v-model="personmobile"> </li>
        <li class="formli formli-area-picker"><label class="datatype">所在地区</label><span placeholder="请选择" class="u-input-area"  disabled>请选择</span> </li>
+       <!-- <group style="margin-top:-0.48em">
+       <x-address :title="title"  v-model="value_0_1" :list="addressData" placeholder="请选择" class="formli "  style="border:none;padding:0">
+      <template slot="title" slot-scope="props">
+        <span  style="font-size:.3rem;height:2.78rem;border:none;padding:0">
+          <span style="vertical-align:middle;line-height:0.78rem" class="datatype">所在地区</span>
+        </span>
+      </template>
+    </x-address></group> 
+    -->
+
        <li class="formli-area"><label class="datatype">详细地址</label><textarea placeholder="请输入详细地址信息" class="u-input-textarea" v-model="personaddr"></textarea></li>
    
        <button class="u-button-block c-margintop-m c-main-size" @click="submit">保存地址</button>
@@ -19,17 +29,65 @@
 </template>
 
 <script>
+import { Group, XAddress, ChinaAddressV4Data} from 'vux'
+import { Picker} from 'mint-ui'
 export default {
   name: 'confirmaddr',
+  components:{
+    Picker, Group, XAddress,
+  },
   data () {
     return {
+      title: '默认为空',
+value_0_1: [],
     personname:'',
     personmobile:'',
     personarea:'',
-    personaddr:'西湖大道人民东路1001室'
+    addressData: ChinaAddressV4Data,
+    personaddr:'西湖大道人民东路1001室',
+    slots: [
+       {
+          flex: 1,
+          values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
+          className: 'slot1',
+          textAlign: 'right'
+        }, {
+          divider: true,
+          content: '-',
+          className: 'slot2'
+        }, {
+          flex: 1,
+          values: ['2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06'],
+          className: 'slot3',
+          textAlign: 'left'
+        }
+      ]
     }
   },
   methods:{
+    
+    logShow (str) {
+      console.log('on-show')
+    },
+       onValuesChange(picker, values) {
+      if (values[0] > values[1]) {
+        picker.setSlotValue(1, values[0]);
+      }
+    },
+      onAddressChange(picker, values) {
+        let sheng = Object.keys(s);
+        let shi = Object.keys(s[values[0]]);
+　　　　　　let index=shi.indexOf(values[1])
+　　　　　　let xian = s[values[0]][shi[index]];
+
+　　　　　this.xianObj = xian;
+        picker.setSlotValues(1, shi);
+        this.addressProvince = values[0];
+        this.addressCity = values[1];
+        this.addressXian = values[2];
+        picker.setSlotValues(2, Object.keys(xian));
+      },
+
     back:function(){
 
     },
@@ -41,7 +99,15 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="less" slot-scope>
+<style>
+.weui-cells{
+margin-top:0;
+}
+.weui-cell{
+  padding:0;
+}
+</style>
+<style lang="less" scoped>
 .g-main{
   background:#fff;
 }

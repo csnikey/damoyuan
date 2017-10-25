@@ -133,7 +133,11 @@ export default {
       },
       sendcode:function(){
         if(this.cansend){
-          this.$api.post('login/sendLoginCode',{mobileNo:18767101995}).then(
+          var params={
+              'mobileNo':'18767101995'
+          }
+          console.log(params)
+          this.$api.post('login/sendLoginCode',params).then(
             (res)=>{
               console.log(res);
             }

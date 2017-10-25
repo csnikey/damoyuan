@@ -20,7 +20,8 @@ export default {
     return axios.get(queryParser(url, params)).then(res => checkStatus(res)).then(res => res.data)
   },
   post (url, params) {
-    return axios.post(`${PROXY_PATH}${url}`, params).then(res => checkStatus(res)).then(res => res.data)
+    console.log(params)
+    return axios.post(`${PROXY_PATH}${url}`, {'_mobileNo': 18767101995}).then(res => checkStatus(res)).then(res => res.data)
   }
 
 }
