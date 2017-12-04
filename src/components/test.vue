@@ -12,7 +12,9 @@
   <router-link to="confirmaddr" >收货地址</router-link><br>
   <router-link to="topay" >支付确认页</router-link><br>
   <router-link to="paysucc" >支付成功页</router-link><br>
-   <router-link to="error" >错误页</router-link>
+   <router-link to="error" >错误页</router-link><br>
+   <router-link to="demo" >测试页</router-link>
+   
 </ul>
   </div>
 </template>

@@ -12,6 +12,11 @@ export default new Router({
       component: comploader('test')
     },
     {
+      path: '/demo',
+      name: 'demo',
+      component: comploader('demo')
+    },
+    {
       path: '/tologin',
       name: 'tologin',
       component: comploader('tologin')
